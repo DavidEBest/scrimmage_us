@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 dark:from-slate-900 dark:via-gray-900 dark:to-black">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
@@ -41,7 +41,7 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-800 dark:to-blue-900 p-8 rounded-2xl text-white transform hover:scale-105 transition-transform">
+            <div className="bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-900 dark:to-slate-900 p-8 rounded-2xl text-white transform hover:scale-105 transition-transform">
               <h3 className="text-2xl font-bold mb-4">Software Development</h3>
               <p className="text-blue-100 dark:text-blue-200 mb-6">
               The right tool for the job, every time. For maintainable websites, I might recommend Wix. For web apps, React + JavaScript/Python. For mobile, React Native. After 20+ years with production code in everything from firmware to mobile apps, I know when to use enterprise solutions and when to keep it simple.
@@ -51,7 +51,7 @@ const Home = () => {
               </Link>
             </div>
             
-            <div className="bg-gradient-to-br from-green-400 to-green-600 dark:from-green-800 dark:to-green-900 p-8 rounded-2xl text-white transform hover:scale-105 transition-transform">
+            <div className="bg-gradient-to-br from-green-400 to-green-600 dark:from-green-900 dark:to-slate-900 p-8 rounded-2xl text-white transform hover:scale-105 transition-transform">
               <h3 className="text-2xl font-bold mb-4">Technical Architecture</h3>
               <p className="text-green-100 dark:text-green-200 mb-6">
               I recently helped an entrepreneur talk through his vision and created a notional architecture that he took to contractors for quotes. Sometimes you need someone to translate between the business vision and technical reality - that's where two decades of building systems comes in handy.
@@ -61,7 +61,7 @@ const Home = () => {
               </Link>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purple-800 dark:to-purple-900 p-8 rounded-2xl text-white transform hover:scale-105 transition-transform">
+            <div className="bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purple-900 dark:to-slate-900 p-8 rounded-2xl text-white transform hover:scale-105 transition-transform">
               <h3 className="text-2xl font-bold mb-4">SDLC Process</h3>
               <p className="text-purple-100 dark:text-purple-200 mb-6">
               The one thing I never skip: Discovery. Understanding the why behind decisions helps ensure we're building the right thing in the right way. From government research labs to startup pivots, I've learned that the process is just as important as the code.
@@ -75,7 +75,7 @@ const Home = () => {
       </div>
 
       {/* Personality Section */}
-      <div className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 dark:from-yellow-800 dark:via-red-900 dark:to-pink-900 py-16">
+      <div className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 dark:from-slate-800 dark:via-gray-800 dark:to-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 drop-shadow-lg">
