@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Base styles */
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: #111827;
@@ -7,16 +11,39 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark mode styles */
 .dark body {
   color: #f9fafb;
   background-color: #0f172a;
 }
 
+html.dark {
+  background-color: #0f172a;
+}
+
+/* Dark mode overrides */
+.dark * {
+  border-color: theme('colors.gray.700');
+}
+
+.dark input, .dark textarea, .dark select {
+  background-color: theme('colors.gray.800');
+  color: theme('colors.gray.100');
+  border-color: theme('colors.gray.600');
+}
+
+.dark input:focus, .dark textarea:focus, .dark select:focus {
+  border-color: theme('colors.blue.500');
+  ring-color: theme('colors.blue.500');
+}
+
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 700;
 }
 
+/* Button styles */
 .btn-primary {
   background-color: #ef4444;
   color: white;

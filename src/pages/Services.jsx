@@ -19,7 +19,7 @@ const Services = () => {
       </div>
       
       {/* Services Grid */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Software Development */}
@@ -160,41 +160,41 @@ const Services = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Common questions from small businesses and creators
             </p>
           </div>
           
           <div className="space-y-8">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 What makes you different from other developers?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 I specialize in 0→1 projects for small businesses and creators. I understand the unique constraints of working with limited budgets and tight timelines, and I focus on practical solutions that get you to production quickly.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 How do you handle pricing for small businesses?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 I offer flexible engagement models including fixed-price projects, hourly consulting, and retainer arrangements. I'm transparent about costs upfront and work within your budget constraints.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Do you work with non-technical founders?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Absolutely! I specialize in working with first-time founders and non-technical creators. I explain technical concepts in plain English and help you make informed decisions about your product.
               </p>
             </div>
@@ -203,12 +203,12 @@ const Services = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gray-900 dark:bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 dark:text-gray-400 mb-8">
             Let's discuss your project and find the right approach for your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

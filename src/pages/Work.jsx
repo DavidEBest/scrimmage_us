@@ -74,13 +74,13 @@ const Work = () => {
       </div>
 
       {/* Case Studies */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Case Studies
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Detailed breakdowns of real projects with challenges, solutions, and results
             </p>
           </div>
@@ -142,13 +142,13 @@ const Work = () => {
       </div>
 
       {/* Published Apps */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Published Apps
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Real apps in production, available in app stores
             </p>
           </div>
@@ -189,13 +189,13 @@ const Work = () => {
       </div>
 
       {/* Technical Samples */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Technical Expertise
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Technologies and approaches I use to build great products
             </p>
           </div>
@@ -241,12 +241,12 @@ const Work = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gray-900 dark:bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Build Your Success Story?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 dark:text-gray-400 mb-8">
             Let's create a case study for your business. Every project starts with a conversation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

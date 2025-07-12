@@ -7,8 +7,12 @@ import Work from './pages/Work';
 import Process from './pages/Process';
 import Writing from './pages/Writing';
 import Contact from './pages/Contact';
+import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
+  // Initialize dark mode
+  useDarkMode();
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">

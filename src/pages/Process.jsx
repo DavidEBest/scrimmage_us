@@ -130,13 +130,13 @@ const Process = () => {
       </div>
 
       {/* Process Steps */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               From Idea to Production
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               A structured approach that minimizes risk and maximizes value
             </p>
           </div>
@@ -190,23 +190,23 @@ const Process = () => {
       </div>
 
       {/* Principles */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               My Principles
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               What guides every decision in every project
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {principles.map((principle, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="text-4xl mb-4">{principle.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{principle.title}</h3>
-                <p className="text-gray-600">{principle.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{principle.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{principle.description}</p>
               </div>
             ))}
           </div>
@@ -284,13 +284,13 @@ const Process = () => {
       </div>
 
       {/* Technology Approach */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Technology Choices
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Practical, proven technologies that fit your constraints
             </p>
           </div>
@@ -336,12 +336,12 @@ const Process = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gray-900 dark:bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 dark:text-gray-400 mb-8">
             Let's discuss your project and see how this process can work for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -16,7 +16,7 @@ const Contact = () => {
         </div>
       </div>
       
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -174,50 +174,50 @@ const Contact = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Before You Reach Out
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Common questions that might help you prepare
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
                 Do you work with non-technical founders?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Yes! I specialize in working with first-time founders and non-technical creators. I explain things in plain English.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
                 What's your minimum project size?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 I take on projects starting around $5,000, but I also offer consulting calls for smaller questions or guidance.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
                 How do you handle project changes?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 I expect changes! We'll build in flexibility and discuss scope changes transparently as the project evolves.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
                 What if I'm not ready to start yet?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 That's fine! Reach out anyway. I'm happy to discuss your ideas and help you plan for when you're ready.
               </p>
             </div>

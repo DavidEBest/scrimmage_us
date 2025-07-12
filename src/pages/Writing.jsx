@@ -110,7 +110,7 @@ const Writing = () => {
       </div>
 
       {/* Categories */}
-      <div className="bg-white py-8">
+      <div className="bg-white dark:bg-gray-900 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category, index) => (
@@ -119,7 +119,7 @@ const Writing = () => {
                 className={`px-6 py-3 rounded-full transition-all ${
                   index === 0
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                    : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300'
                 }`}
               >
                 {category.name} ({category.count})
@@ -130,13 +130,13 @@ const Writing = () => {
       </div>
 
       {/* Featured Posts */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Featured Articles
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Popular posts that help small businesses make better technology decisions
             </p>
           </div>
@@ -167,33 +167,33 @@ const Writing = () => {
       </div>
 
       {/* Recent Posts */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Recent Posts
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Latest insights and practical advice
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <article key={index} className="bg-white dark:bg-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex items-center justify-between mb-4">
                   <span className={`bg-gradient-to-r ${post.gradient} text-white px-3 py-1 rounded-full text-sm`}>
                     {post.category}
                   </span>
-                  <span className="text-gray-500 text-sm">{post.readTime}</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">{post.readTime}</span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-500 text-sm">{post.date}</span>
-                  <button className="text-purple-600 hover:text-purple-700 font-medium text-sm">
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">{post.date}</span>
+                  <button className="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 font-medium text-sm">
                     Read More →
                   </button>
                 </div>
@@ -232,13 +232,13 @@ const Writing = () => {
       </div>
 
       {/* Topics & Resources */}
-      <div className="bg-white py-16">
+      <div className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               What I Write About
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Topics that matter for small business technology decisions
             </p>
           </div>
@@ -248,44 +248,44 @@ const Writing = () => {
               <div className="bg-gradient-to-br from-blue-500 to-cyan-600 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4">
                 💻
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Technical Deep-Dives</h3>
-              <p className="text-gray-600 text-sm">Code examples, architecture patterns, and development best practices</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Technical Deep-Dives</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Code examples, architecture patterns, and development best practices</p>
             </div>
 
             <div className="text-center">
               <div className="bg-gradient-to-br from-green-500 to-teal-600 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4">
                 📊
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Business Strategy</h3>
-              <p className="text-gray-600 text-sm">Technology decisions that impact your bottom line and growth</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Business Strategy</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Technology decisions that impact your bottom line and growth</p>
             </div>
 
             <div className="text-center">
               <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4">
                 🎯
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Process & Methodology</h3>
-              <p className="text-gray-600 text-sm">How to build software efficiently with small teams and tight budgets</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Process & Methodology</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">How to build software efficiently with small teams and tight budgets</p>
             </div>
 
             <div className="text-center">
               <div className="bg-gradient-to-br from-orange-500 to-red-600 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl text-white mx-auto mb-4">
                 🚀
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Case Studies</h3>
-              <p className="text-gray-600 text-sm">Real projects with challenges, solutions, and lessons learned</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Case Studies</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">Real projects with challenges, solutions, and lessons learned</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gray-900 dark:bg-gray-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Have a Specific Question?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 dark:text-gray-400 mb-8">
             Can't find what you're looking for? Let's discuss your specific technology challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
