@@ -67,7 +67,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-6 mb-4 md:mb-0">
               <p className="text-gray-400 dark:text-gray-500">
-                &copy; 2024 Scrimmage. Built with{' '}
+                &copy; 2025 Scrimmage. Built with{' '}
                 <span className="text-red-400">♥</span>{' '}
                 for small businesses.
               </p>
