@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Work from './pages/Work';
-import Process from './pages/Process';
 import Writing from './pages/Writing';
 import Contact from './pages/Contact';
 import { useDarkMode } from './hooks/useDarkMode';
@@ -22,7 +21,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/work" element={<Work />} />
-            <Route path="/process" element={<Process />} />
             <Route path="/writing" element={<Writing />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

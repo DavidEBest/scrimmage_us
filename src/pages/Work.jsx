@@ -253,8 +253,8 @@ const Work = () => {
             <Link to="/contact" className="btn-primary transform hover:scale-105 transition-transform">
               Start Your Project
             </Link>
-            <Link to="/process" className="btn-secondary transform hover:scale-105 transition-transform">
-              Learn My Process
+            <Link to="/services" className="btn-secondary transform hover:scale-105 transition-transform">
+              Learn About Services
             </Link>
           </div>
         </div>

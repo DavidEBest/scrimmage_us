@@ -177,7 +177,7 @@ const Services = () => {
                 What makes you different from other developers?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                I specialize in 0→1 projects for small businesses and creators. I understand the unique constraints of working with limited budgets and tight timelines, and I focus on practical solutions that get you to production quickly.
+                20+ years of production code everywhere gives me a unique perspective. I've supported government research labs where collaboration and experimentation are key, and I bring that same iterative approach to startups and small businesses. I'm conversational but direct, and I view development as collaborative. Plus, I actually welcome feedback - the best products come from understanding your vision, not just following a spec.
               </p>
             </div>
             
@@ -186,7 +186,7 @@ const Services = () => {
                 How do you handle pricing for small businesses?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                I offer flexible engagement models including fixed-price projects, hourly consulting, and retainer arrangements. I'm transparent about costs upfront and work within your budget constraints.
+                Flexibility is key. I know early creators don't have huge budgets, so let's right-size the project and grow from there. I offer hourly consulting, project-based pricing, retainers, and even profit-sharing for mobile apps. The goal is finding what works for your situation.
               </p>
             </div>
             
@@ -195,7 +195,7 @@ const Services = () => {
                 Do you work with non-technical founders?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Absolutely! I specialize in working with first-time founders and non-technical creators. I explain technical concepts in plain English and help you make informed decisions about your product.
+                Absolutely. I've helped translate entrepreneur visions into technical architectures, turned card decks into mobile apps, and rebuilt community platforms from scratch. Discovery is the most important part - I need to understand your why before we talk about the how.
               </p>
             </div>
           </div>
@@ -215,8 +215,8 @@ const Services = () => {
             <Link to="/contact" className="btn-primary transform hover:scale-105 transition-transform">
               Start a Project
             </Link>
-            <Link to="/process" className="btn-secondary transform hover:scale-105 transition-transform">
-              Learn About My Process
+            <Link to="/work" className="btn-secondary transform hover:scale-105 transition-transform">
+              See Case Studies
             </Link>
           </div>
         </div>
