@@ -1,4 +1,60 @@
+import { useState } from 'react';
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    project: '',
+    budget: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Use different API URL for development vs production
+      const apiUrl = process.env.NODE_ENV === 'development' 
+        ? 'http://localhost:3001/api/contact'
+        : '/api/contact';
+        
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: result.message });
+        setFormData({ name: '', email: '', project: '', budget: '', message: '' });
+      } else {
+        setSubmitStatus({ type: 'error', message: result.error });
+      }
+    } catch (error) {
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'Failed to send message. Please try again later.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-400 via-blue-500 to-purple-600">
       {/* Hero Section */}
@@ -23,7 +79,16 @@ const Contact = () => {
             <div>
               <div className="bg-gradient-to-br from-pink-500 to-rose-600 p-8 rounded-2xl text-white">
                 <h2 className="text-3xl font-bold mb-6">Let's Start a Conversation</h2>
-                <form className="space-y-6">
+                {submitStatus && (
+                  <div className={`p-4 rounded-lg mb-6 ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-500/20 border border-green-400 text-green-100' 
+                      : 'bg-red-500/20 border border-red-400 text-red-100'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                       Name *
@@ -31,6 +96,8 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-yellow-300 focus:border-transparent"
                       placeholder="Your name"
@@ -44,6 +111,8 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-yellow-300 focus:border-transparent"
                       placeholder="your@email.com"
@@ -56,6 +125,8 @@ const Contact = () => {
                     </label>
                     <select
                       id="project"
+                      value={formData.project}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-yellow-300 focus:border-transparent"
                     >
                       <option value="" className="text-gray-900">Select a project type</option>
@@ -74,9 +145,12 @@ const Contact = () => {
                     </label>
                     <select
                       id="budget"
+                      value={formData.budget}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-yellow-300 focus:border-transparent"
                     >
                       <option value="" className="text-gray-900">Select budget range</option>
+                      <option value="lt5k" className="text-gray-900">Less than $5,000</option>
                       <option value="5k-10k" className="text-gray-900">$5,000 - $10,000</option>
                       <option value="10k-25k" className="text-gray-900">$10,000 - $25,000</option>
                       <option value="25k-50k" className="text-gray-900">$25,000 - $50,000</option>
@@ -92,14 +166,20 @@ const Contact = () => {
                     <textarea
                       id="message"
                       rows={6}
+                      value={formData.message}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-yellow-300 focus:border-transparent"
                       placeholder="What are you trying to build? What's your timeline? What challenges are you facing?"
                     />
                   </div>
                   
-                  <button type="submit" className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                    Send Message
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-yellow-400 hover:bg-yellow-500 disabled:bg-yellow-600 disabled:cursor-not-allowed text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
@@ -141,9 +221,14 @@ const Contact = () => {
                 <p className="text-orange-100 mb-6">
                   Sometimes it's easier to discuss your project over a call. Let's schedule a 30-minute discovery conversation.
                 </p>
-                <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                <a 
+                  href="https://cal.com/scrimmage-us/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center"
+                >
                   Schedule a Call
-                </button>
+                </a>
               </div>
 
               {/* What to Expect */}

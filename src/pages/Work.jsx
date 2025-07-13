@@ -3,55 +3,81 @@ import { Link } from 'react-router-dom';
 const Work = () => {
   const caseStudies = [
     {
-      title: "E-commerce Platform MVP",
-      client: "Small Business Retailer",
-      type: "Web Application",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      description: "Built a complete e-commerce platform from concept to launch in 8 weeks, helping a local retailer move online during COVID.",
-      challenge: "Tight timeline, limited budget, and need for payment processing integration",
-      solution: "Focused MVP approach with essential features first, iterative development",
-      results: ["40% increase in sales", "200+ online orders in first month", "Reduced operational costs"],
-      gradient: "from-blue-500 to-cyan-600"
-    },
-    {
-      title: "Mobile Task Management App",
-      client: "Startup Founder",
+      title: "Fearless Change Mobile App",
+      client: "Published Authors with Established Book Series",
       type: "React Native App",
-      tech: ["React Native", "Firebase", "Redux", "AsyncStorage"],
-      description: "Developed a cross-platform task management app for teams, focusing on simplicity and offline functionality.",
-      challenge: "Offline-first architecture, real-time sync, and cross-platform compatibility",
-      solution: "Firebase for real-time sync, Redux for state management, strategic caching",
-      results: ["500+ downloads in first month", "4.7 star rating", "Featured in local startup showcase"],
-      gradient: "from-purple-500 to-pink-600"
+      tech: ["React Native", "iOS/Android Deployment"],
+      description: "Transformed a physical card deck with whimsical design into a mobile-friendly experience while maintaining the authors' unique visual style.",
+      challenge: "Transform physical card deck and whimsical design into mobile-friendly experience that works across device sizes",
+      solution: "React Native app with responsive design that maintained the authors' unique visual style across all device sizes",
+      results: ["Authors gave extremely positive feedback", "Physical card design was updated based on approved mobile interface", "Successful cross-platform deployment"],
+      timeline: "Couple months to first release",
+      gradient: "from-blue-500 to-cyan-600",
+      links: [
+        { type: "App Store", url: "https://apps.apple.com/il/app/fearless-change/id6451222986" },
+        { type: "Google Play", url: "https://play.google.com/store/apps/details?id=com.fearlesschange&hl=en_US&pli=1" }
+      ]
     },
     {
-      title: "Legacy System Modernization",
-      client: "Mid-size Manufacturing Company",
-      type: "System Architecture",
-      tech: ["React", "Python", "Docker", "AWS"],
-      description: "Modernized a 10-year-old inventory management system with modern tech stack and improved UX.",
-      challenge: "Data migration, minimal downtime, training non-technical users",
-      solution: "Phased migration, comprehensive testing, user-friendly interface design",
-      results: ["50% faster processing", "Zero data loss", "95% user satisfaction"],
-      gradient: "from-green-500 to-teal-600"
+      title: "The Cancer Cards",
+      client: "Kickstarter Creator with Physical Card Deck",
+      type: "React Native App", 
+      tech: ["React Native", "Cross-platform Deployment"],
+      description: "Created more than just digitized cards - built an engaging mobile experience with notes, grouping, favoriting, and sharing features.",
+      challenge: "Create more than just digitized cards - build engaging mobile experience that takes advantage of device capabilities",
+      solution: "Mobile app with notes, grouping, favoriting, and sharing features that leverage mobile device capabilities beyond static cards",
+      results: ["Included as free download for Kickstarter supporters", "Most successful internationally due to easy access vs shipping physical decks", "Leveraged similar flow from previous app for faster development"],
+      timeline: "Accelerated development using proven patterns",
+      gradient: "from-purple-500 to-pink-600",
+      links: [
+        { type: "App Store", url: "https://apps.apple.com/us/app/the-cancer-cards/id6478838548" },
+        { type: "Google Play", url: "https://play.google.com/store/apps/details?id=com.cancercards" }
+      ]
+    },
+    {
+      title: "Ethnosh Dayton",
+      client: "Local Nonprofit Organizing International Restaurant Meals",
+      type: "Website Rebuild",
+      tech: ["Wix", "Integrated Ticketing"],
+      description: "Rebuilt web presence from scratch after COVID to restart a thriving community around locally owned international restaurant experiences.",
+      challenge: "Rebuild web presence from scratch after COVID to restart thriving community with easy ticket purchasing",
+      solution: "Story-focused website with beautiful restaurant features and integrated ticket purchasing system for seamless user experience",
+      results: ["Meals consistently sell out", "Incredibly easy ticket purchasing for the community", "Successfully restarted post-COVID operations"],
+      timeline: "Live website in around 2 weeks",
+      gradient: "from-green-500 to-teal-600",
+      links: [
+        { type: "Website", url: "https://www.ethnoshdayton.org/" }
+      ]
     }
   ];
 
   const publishedApps = [
     {
-      name: "How Not To Say",
-      description: "Communication improvement app helping users avoid common workplace communication mistakes",
-      tech: ["React Native", "Node.js", "MongoDB"],
-      status: "Live in App Store",
-      users: "1,000+ downloads",
+      name: "The Cancer Cards",
+      description: "Cancer support communication app helping users navigate difficult conversations with notes, grouping, and sharing features",
+      tech: ["React Native", "Cross-platform"],
+      status: "Published",
       gradient: "from-orange-500 to-red-600"
     },
     {
       name: "Fearless Change",
-      description: "Personal development app for building confidence and managing change in professional settings",
-      tech: ["React Native", "Firebase", "Redux"],
-      status: "Live in App Store",
-      users: "500+ downloads",
+      description: "Mobile transformation of physical card deck maintaining whimsical design across device sizes",
+      tech: ["React Native", "iOS/Android"],
+      status: "Published",
+      gradient: "from-indigo-500 to-purple-600"
+    },
+    {
+      name: "Godlight Movement",
+      description: "Companion App to the Godlight Movement Community and Book.",
+      tech: ["React Native", "iOS/Android"],
+      status: "Published",
+      gradient: "from-indigo-500 to-purple-600"
+    },
+    {
+      name: "Ticket Tote",
+      description: "A silly little app that acts as wallet for all those QR code tickets that don't have Apple Wallet Integration.",
+      tech: ["React Native", "iOS"],
+      status: "Published",
       gradient: "from-indigo-500 to-purple-600"
     }
   ];
@@ -108,6 +134,13 @@ const Work = () => {
                         <p className="text-white/80 text-sm">{study.solution}</p>
                       </div>
                     </div>
+                    
+                    {study.timeline && (
+                      <div className="mt-4">
+                        <h4 className="font-bold mb-2">Timeline</h4>
+                        <p className="text-white/80 text-sm">{study.timeline}</p>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="space-y-6">
@@ -133,6 +166,28 @@ const Work = () => {
                         ))}
                       </ul>
                     </div>
+                    
+                    {study.links && (
+                      <div>
+                        <h4 className="font-bold mb-3">View Live</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {study.links.map((link, linkIndex) => (
+                            <a 
+                              key={linkIndex} 
+                              href={link.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2"
+                            >
+                              {link.type === 'App Store' && '📱'}
+                              {link.type === 'Google Play' && '🤖'}
+                              {link.type === 'Website' && '🌐'}
+                              {link.type}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -171,15 +226,9 @@ const Work = () => {
                     </div>
                   </div>
                   
-                  <div className="flex justify-between items-center pt-4 border-t border-white/20">
-                    <div>
-                      <div className="text-sm text-white/80">Status</div>
-                      <div className="font-semibold">{app.status}</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-white/80">Users</div>
-                      <div className="font-semibold">{app.users}</div>
-                    </div>
+                  <div className="pt-4 border-t border-white/20">
+                    <div className="text-sm text-white/80">Status</div>
+                    <div className="font-semibold">{app.status}</div>
                   </div>
                 </div>
               </div>
@@ -206,7 +255,6 @@ const Work = () => {
               <h3 className="text-xl font-bold mb-4">Frontend</h3>
               <ul className="space-y-2 text-blue-100">
                 <li>• React & React Native</li>
-                <li>• Vue.js & Nuxt.js</li>
                 <li>• TypeScript</li>
                 <li>• Tailwind CSS</li>
                 <li>• Progressive Web Apps</li>
@@ -218,9 +266,9 @@ const Work = () => {
               <h3 className="text-xl font-bold mb-4">Backend</h3>
               <ul className="space-y-2 text-green-100">
                 <li>• Node.js & Express</li>
-                <li>• Python & FastAPI</li>
-                <li>• PostgreSQL & MongoDB</li>
-                <li>• REST & GraphQL APIs</li>
+                <li>• Python & Flask</li>
+                <li>• PostgreSQL</li>
+                <li>• REST APIs</li>
                 <li>• Docker & AWS</li>
               </ul>
             </div>
