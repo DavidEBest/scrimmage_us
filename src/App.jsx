@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Work from './pages/Work';
 import Writing from './pages/Writing';
 import Contact from './pages/Contact';
+import LeadMagnet from './pages/LeadMagnet';
 import PrivacyPolicyHowNotToSay from './pages/PrivacyPolicyHowNotToSay';
 import PrivacyPolicyFearlessChange from './pages/PrivacyPolicyFearlessChange';
 import PrivacyPolicyGodLight from './pages/PrivacyPolicyGodLight';
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <Router>
+      <GoogleAnalytics />
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
@@ -31,6 +34,7 @@ function App() {
             <Route path="/work" element={<Work />} />
             {/* <Route path="/writing" element={<Writing />} /> */} {/* Hidden until blog posts are ready */}
             <Route path="/contact" element={<Contact />} />
+            <Route path="/companion-app-guide" element={<LeadMagnet />} />
             {/* Legal pages for mobile apps - not linked in navigation */}
             <Route path="/privacy-policy-how-not-to-say" element={<PrivacyPolicyHowNotToSay />} />
             <Route path="/privacy-policy-fearless-change" element={<PrivacyPolicyFearlessChange />} />

@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import contactHandler from './api/contact.js';
+import leadMagnetHandler from './api/lead-magnet.js';
 
 // Load environment variables
 dotenv.config();
@@ -18,6 +19,11 @@ app.use(express.json());
 app.post('/api/contact', (req, res) => {
   // Wrap the Vercel function for Express
   contactHandler(req, res);
+});
+
+app.post('/api/lead-magnet', (req, res) => {
+  // Wrap the Vercel function for Express
+  leadMagnetHandler(req, res);
 });
 
 app.listen(PORT, () => {
