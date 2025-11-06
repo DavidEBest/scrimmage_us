@@ -222,7 +222,7 @@ const Contact = () => {
                   Sometimes it's easier to discuss your project over a call. Let's schedule a 30-minute discovery conversation.
                 </p>
                 <a 
-                  href="https://cal.com/scrimmage-us/30min" 
+                  href="https://cal.com/davidebest/30min" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center"
