@@ -73,7 +73,7 @@ export default async function handler(req, res) {
           <div style="border-top: 1px solid #e5e7eb; margin-top: 40px; padding-top: 20px;">
             <p style="font-size: 14px; color: #6b7280; text-align: center;">
               Want to discuss your specific app challenge? 
-              <a href="https://cal.com/scrimmage-us/30min" style="color: #3b82f6;">Schedule a free 30-minute consultation</a>
+              <a href="https://cal.com/davidebest/30min" style="color: #3b82f6;">Schedule a free 30-minute consultation</a>
             </p>
           </div>
         </div>
